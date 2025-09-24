@@ -1,0 +1,30 @@
+[gd_scene load_steps=3 format=3 uid="uid://buk848tgt2dsq"]
+
+[ext_resource type="Script" uid="uid://cxxnqcc1busur" path="res://dialogue_overlay.gd" id="1_gwiqo"]
+[ext_resource type="Texture2D" uid="uid://b7xoianpk2514" path="res://assets/01_Flat_Theme/Sprites/UI_Flat_Button01a_1.png" id="2_6wag1"]
+
+[node name="dialogueOverlay" type="CanvasLayer"]
+script = ExtResource("1_gwiqo")
+
+[node name="Panel" type="Panel" parent="."]
+offset_right = 1922.0
+offset_bottom = 1085.0
+
+[node name="dialogueBox" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(980, 844.00006)
+scale = Vector2(39.375, 14.1875)
+texture = ExtResource("2_6wag1")
+
+[node name="dialogueLabel" type="Label" parent="."]
+z_index = 3
+offset_left = 399.0
+offset_top = 695.0
+offset_right = 1559.0
+offset_bottom = 1016.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+text = "random text here"
+
+[node name="textTimer" type="Timer" parent="."]
+wait_time = 0.05
