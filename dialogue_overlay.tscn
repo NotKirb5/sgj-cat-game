@@ -19,7 +19,7 @@ texture = ExtResource("2_6wag1")
 [node name="dialogueLabel" type="Label" parent="."]
 z_index = 3
 offset_left = 399.0
-offset_top = 695.0
+offset_top = 748.0
 offset_right = 1559.0
 offset_bottom = 1016.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
@@ -28,3 +28,12 @@ text = "random text here"
 
 [node name="textTimer" type="Timer" parent="."]
 wait_time = 0.05
+
+[node name="namelabel" type="Label" parent="."]
+offset_left = 397.0
+offset_top = 694.0
+offset_right = 1546.0
+offset_bottom = 763.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 50
+text = "Some random name"

@@ -10,6 +10,6 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	pass
 
-
+# in order to chage the character expressions you just change the spriteframe
 func changesprite(sprite:int)->void:
 	sprites.frame = sprite
