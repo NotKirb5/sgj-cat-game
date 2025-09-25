@@ -6,7 +6,7 @@ extends CanvasLayer
 @onready var textTimer = $textTimer
 
 #when more characters get added load them up here
-@onready var examplechar = preload('res://examplecharacter.tscn')
+@onready var char = preload('res://character.tscn')
 
 var talking = false
 var currentDialogue = []
@@ -31,7 +31,6 @@ func _physics_process(delta: float) -> void:
 			self.queue_free()
 
 func playtext(text:String)->void:
-	talking = true
 	# if the string starts with /c it splits the string and tries to run a command
 	#otherwise it will just run the text as normal
 	if text.split(' ')[0] == '/c':
@@ -42,6 +41,8 @@ func playtext(text:String)->void:
 		dindex += 1
 		playtext(currentDialogue[dindex])
 	else:
+		talking = true
+		
 		dlabel.text = ''
 		for i in text:
 			dlabel.text = dlabel.text + i
@@ -51,7 +52,7 @@ func playtext(text:String)->void:
 			else:
 				textTimer.start(.05)
 			await textTimer.timeout
-	talking = false
+		talking = false
 	
 
 func playdialogue(dialogue: Array)->void:
@@ -65,24 +66,29 @@ func exec(commands:Array):
 	# animate will change the frame of the character ['animate',character group, sprite index]
 	# animate gets the character by its group in order to actually get it
 	# settalk sets the label at the top to signify who is talking ['settalk', name]
+	#IMPORTANT when setting a name with 2 words use a underscore to seperate it
+	#focus and defocus are in the name ["focus"/"defocus", character group]
+	#
 	match commands[0]:
 		"inst":
-			var chara = findcharacter(commands[1])
-			var inst = chara.instantiate()
+			var inst = char.instantiate()
+			inst.add_to_group(commands[1])
 			inst.global_position = Vector2(int(commands[2]),int(commands[3]))
 			add_child(inst)
+			inst.setcharacter(commands[1])
+			
 		"animate":
 			var chara = get_tree().get_first_node_in_group(commands[1])
 			chara.changesprite(int(commands[2]))
 		"settalk":
-			nlabel.text = commands[1]
-
-
-func findcharacter(chara:String)-> PackedScene:
-	#simple, just matches a string to the preloaded scene
-	match chara:
-		"example":
-			return examplechar
-		_:
-			print('could not find character requested')
-			return examplechar
+			var name = PackedStringArray(commands[1].split("_"))
+			nlabel.text = " ".join(name)
+		"defocus":
+			var chara = get_tree().get_first_node_in_group(commands[1])
+			chara.defocus()
+		"focus":
+			var chara = get_tree().get_first_node_in_group(commands[1])
+			chara.focus()
+		"flip":
+			var chara = get_tree().get_first_node_in_group(commands[1])
+			chara.flipsprite(commands[2])

@@ -5,19 +5,22 @@
 
 [node name="dialogueOverlay" type="CanvasLayer"]
 script = ExtResource("1_gwiqo")
+metadata/_edit_vertical_guides_ = [498.0, 1400.0]
+metadata/_edit_horizontal_guides_ = [498.0]
 
 [node name="Panel" type="Panel" parent="."]
 offset_right = 1922.0
 offset_bottom = 1085.0
 
 [node name="dialogueBox" type="Sprite2D" parent="."]
+z_index = 30
 texture_filter = 1
 position = Vector2(980, 844.00006)
 scale = Vector2(39.375, 14.1875)
 texture = ExtResource("2_6wag1")
 
 [node name="dialogueLabel" type="Label" parent="."]
-z_index = 3
+z_index = 30
 offset_left = 399.0
 offset_top = 748.0
 offset_right = 1559.0
@@ -30,6 +33,7 @@ text = "random text here"
 wait_time = 0.05
 
 [node name="namelabel" type="Label" parent="."]
+z_index = 30
 offset_left = 397.0
 offset_top = 694.0
 offset_right = 1546.0

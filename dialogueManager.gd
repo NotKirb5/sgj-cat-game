@@ -5,7 +5,7 @@ var scene = 'test'
 #stores dialogue in a dictonary and gets stored in a list
 #when the sript comes out id want to make it a seprate file
 var storydict = {
-		"test": ['/c inst example 200 600','/c settalk Pheonix','i want a big mac rn not gonna lie','im not even that hungry i just want onions', '/c animate examplecharacter 2','and NO PICKLES','rip haru urara']
+		"test": ['/c inst sp 500 500','/c settalk Sweet_Potato','i want a big mac rn not gonna lie','/c defocus sp','im not even that hungry i just want onions','/c focus sp','and NO PICKLES','/c defocus sp','rip haru urara']
 
 }
 

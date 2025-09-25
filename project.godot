@@ -11,6 +11,7 @@ config_version=5
 [application]
 
 config/name="sgjgame"
+run/main_scene="uid://cty7bbdt10uqx"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://icon.svg"
 
@@ -28,6 +29,9 @@ window/stretch/mode="viewport"
 
 clickable=""
 examplecharacter=""
+dazy=""
+sp=""
+miu=""
 
 [rendering]
 
