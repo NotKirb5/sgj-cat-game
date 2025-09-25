@@ -62,7 +62,7 @@ func playdialogue(dialogue: Array)->void:
 
 func exec(commands:Array):
 	#most jank part of this whole thing
-	# inst will spawn the character ['inst', character, x position, y position]
+	# inst will spawn the character ['inst', character group, x position, y position]
 	# animate will change the frame of the character ['animate',character group, sprite index]
 	# animate gets the character by its group in order to actually get it
 	# settalk sets the label at the top to signify who is talking ['settalk', name]
