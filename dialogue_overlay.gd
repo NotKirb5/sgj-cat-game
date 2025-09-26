@@ -4,7 +4,7 @@ extends CanvasLayer
 @onready var dlabel = $dialogueLabel
 @onready var nlabel = $namelabel
 @onready var textTimer = $textTimer
-
+@onready var waittimer = Timer
 #when more characters get added load them up here
 @onready var char = preload('res://character.tscn')
 
@@ -103,5 +103,11 @@ func exec(commands:Array):
 		"setbg":
 			var bg = get_tree().get_first_node_in_group("background")
 			bg.setbackground(commands[1])
+		"wait":
+			var inst = waittimer.new().instantiate()
+			add_child(inst)
+			inst.start(float(commands[1]))
+			await inst.timeout
+			print("waited for " + commands[1] + "second(s)")
 		"transform":
 			print('we just gonna fucking transform ig')

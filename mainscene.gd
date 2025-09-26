@@ -12,4 +12,8 @@ func _process(delta: float) -> void:
 
 
 func _on_button_pressed() -> void:
-	dman.playscene("prologue2")
+	dman.playscene("prologue3")
+
+
+func _on_button_mouse_entered() -> void:
+	pass # Replace with function body.

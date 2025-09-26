@@ -4,6 +4,7 @@ extends Node2D
 var defocusing = false
 var focusing = true
 var spawning = true
+var dying = false
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	self.modulate.a = 0
@@ -13,7 +14,12 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	if spawning:
 		self.modulate.a = move_toward(self.modulate.a,1,1*delta)
-		
+		if self.modulate.a >= 1:
+			spawning = false
+	if dying:
+		self.modulate.a = move_toward(self.modulate.a,0,1*delta)
+		if self.modulate.a <= 0:
+			self.queue_free()
 	#i feel like theres a better way to do this but it loosk nicer in the game so it dont matter
 	if defocusing:
 		self.modulate.a = move_toward(self.modulate.a,0.7,3*delta)
@@ -37,6 +43,7 @@ func setcharacter(c:String)->void:
 
 func defocus()->void:
 	focusing = false
+	spawning = false
 	defocusing = true
 
 func focus()->void:
