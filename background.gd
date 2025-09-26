@@ -1,4 +1,4 @@
-extends Node2D
+extends AnimatedSprite2D
 
 
 # Called when the node enters the scene tree for the first time.
@@ -10,6 +10,5 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	pass
 
-
-func _on_button_pressed() -> void:
-	dman.playscene("prologue2")
+func setbackground(bg:String)->void:
+	set_animation(bg)

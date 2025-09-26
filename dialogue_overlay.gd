@@ -39,7 +39,12 @@ func playtext(text:String)->void:
 		print(commands)
 		exec(commands)
 		dindex += 1
-		playtext(currentDialogue[dindex])
+		if dindex < len(currentDialogue):
+			playtext(currentDialogue[dindex])
+		else:
+			dman.sceneplaying = false
+			dman.toggleclickables(false)
+			self.queue_free()
 	else:
 		talking = true
 		
@@ -91,4 +96,12 @@ func exec(commands:Array):
 			chara.focus()
 		"flip":
 			var chara = get_tree().get_first_node_in_group(commands[1])
-			chara.flipsprite(commands[2])
+			chara.flipsprite()
+		"delete":
+			var chara = get_tree().get_first_node_in_group(commands[1])
+			chara.queue_free()
+		"setbg":
+			var bg = get_tree().get_first_node_in_group("background")
+			bg.setbackground(commands[1])
+		"transform":
+			print('we just gonna fucking transform ig')

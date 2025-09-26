@@ -5,7 +5,7 @@
 
 [node name="dialogueOverlay" type="CanvasLayer"]
 script = ExtResource("1_gwiqo")
-metadata/_edit_vertical_guides_ = [498.0, 1400.0]
+metadata/_edit_vertical_guides_ = [498.0, 1400.0, 948.0]
 metadata/_edit_horizontal_guides_ = [498.0]
 
 [node name="Panel" type="Panel" parent="."]
@@ -28,6 +28,7 @@ offset_bottom = 1016.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 32
 text = "random text here"
+autowrap_mode = 2
 
 [node name="textTimer" type="Timer" parent="."]
 wait_time = 0.05
