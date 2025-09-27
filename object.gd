@@ -1,7 +1,7 @@
 extends Node2D
 
 var triggered = false
-
+@onready var sprite = $sprite
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass # Replace with function body.
@@ -13,11 +13,14 @@ func _process(delta: float) -> void:
 
 
 func _on_button_pressed() -> void:
-	pass # Replace with function body.
+	sprite.frame = 1
+	triggered = true
+	cman.points += 1
 
 
 func _on_button_mouse_entered() -> void:
-	scale = Vector2(1.2,1.2)
+	if not triggered:
+		scale = Vector2(1.2,1.2)
 
 
 func _on_button_mouse_exited() -> void:

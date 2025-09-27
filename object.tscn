@@ -1,14 +1,18 @@
-[gd_scene load_steps=5 format=3 uid="uid://bk4s5pg0mws31"]
+[gd_scene load_steps=6 format=3 uid="uid://bk4s5pg0mws31"]
 
 [ext_resource type="Script" uid="uid://derkbvcdntqs5" path="res://object.gd" id="1_0i3lm"]
 [ext_resource type="Theme" uid="uid://b4rgocusn6q8r" path="res://objecttheme.tres" id="1_3xuqs"]
 [ext_resource type="Texture2D" uid="uid://dyjm3o3w8vtx3" path="res://assets/prototype.png" id="2_0i3lm"]
+[ext_resource type="Texture2D" uid="uid://djfm6oy1ksuxi" path="res://assets/prototype2.png" id="4_dwaef"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_dwaef"]
 animations = [{
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("2_0i3lm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_dwaef")
 }],
 "loop": true,
 "name": &"test",
