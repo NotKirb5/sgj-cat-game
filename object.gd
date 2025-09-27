@@ -1,5 +1,6 @@
 extends Node2D
 
+var triggered = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -12,8 +13,12 @@ func _process(delta: float) -> void:
 
 
 func _on_button_pressed() -> void:
-	dman.playscene("prologue1")
+	pass # Replace with function body.
 
 
 func _on_button_mouse_entered() -> void:
-	pass # Replace with function body.
+	scale = Vector2(1.2,1.2)
+
+
+func _on_button_mouse_exited() -> void:
+	scale = Vector2(1,1)

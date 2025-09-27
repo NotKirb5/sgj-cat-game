@@ -27,7 +27,6 @@ func _physics_process(delta: float) -> void:
 			playtext(currentDialogue[dindex])
 		else:
 			dman.sceneplaying = false
-			dman.toggleclickables(false)
 			self.queue_free()
 
 func playtext(text:String)->void:
@@ -43,7 +42,6 @@ func playtext(text:String)->void:
 			playtext(currentDialogue[dindex])
 		else:
 			dman.sceneplaying = false
-			dman.toggleclickables(false)
 			self.queue_free()
 	else:
 		talking = true
@@ -67,13 +65,17 @@ func playdialogue(dialogue: Array)->void:
 
 func exec(commands:Array):
 	#most jank part of this whole thing
+	#when making the script you use /c to make it an executable
+	#then we split the commands with spaces so we now have a list of you commands like this ["hi","player1"]
+	# when getting the character by its group in order to actually get it
+	#the group names are 'dazy','miu', and 'sp'
 	# inst will spawn the character ['inst', character group, x position, y position]
 	# animate will change the frame of the character ['animate',character group, sprite index]
-	# animate gets the character by its group in order to actually get it
 	# settalk sets the label at the top to signify who is talking ['settalk', name]
 	#IMPORTANT when setting a name with 2 words use a underscore to seperate it
 	#focus and defocus are in the name ["focus"/"defocus", character group]
-	#
+	#flip just flips the sprite horizontally ["flip","character"]
+	
 	match commands[0]:
 		"inst":
 			var inst = char.instantiate()
@@ -104,10 +106,18 @@ func exec(commands:Array):
 			var bg = get_tree().get_first_node_in_group("background")
 			bg.setbackground(commands[1])
 		"wait":
-			var inst = waittimer.new().instantiate()
+			var inst = waittimer.new()
 			add_child(inst)
 			inst.start(float(commands[1]))
 			await inst.timeout
 			print("waited for " + commands[1] + "second(s)")
+		"nextscene":
+			dman.sceneplaying = false
+			dman.playscene(commands[1])
+			self.queue_free()
+		"gaming":
+			print("HELP WE HAVENT DONT SHIT ABOUT THE GAMEPLAY FUCK IMMA JUST THROW THIS NUMBER OUT AAAH")
+			print(commands[1])
 		"transform":
+			#lowkey idk what we are doing here
 			print('we just gonna fucking transform ig')
