@@ -1,18 +1,48 @@
-[gd_scene load_steps=9 format=3 uid="uid://dyydr04obcbvj"]
+[gd_scene load_steps=24 format=3 uid="uid://dyydr04obcbvj"]
 
 [ext_resource type="Script" uid="uid://0hns75l8y42i" path="res://character.gd" id="1_pjt0s"]
 [ext_resource type="Texture2D" uid="uid://bs3fxqfqxoikj" path="res://assets/charactersprites/dasyn.png" id="2_yxww1"]
+[ext_resource type="Texture2D" uid="uid://pknweeape5k6" path="res://assets/charactersprites/dazyh.png" id="3_8i6g0"]
 [ext_resource type="Texture2D" uid="uid://bab7aqhu7rots" path="res://assets/textassets/testframe1.png" id="3_px5sl"]
 [ext_resource type="Texture2D" uid="uid://l10dx7sa4o2v" path="res://assets/textassets/testframe2.png" id="4_0qfo5"]
+[ext_resource type="Texture2D" uid="uid://dccgg7dx0t8eg" path="res://assets/charactersprites/dazys.png" id="4_r5wlx"]
+[ext_resource type="Texture2D" uid="uid://cfhl1wohhq5nf" path="res://assets/charactersprites/dazyt.png" id="5_1r1pa"]
 [ext_resource type="Texture2D" uid="uid://di4ppt32jesub" path="res://assets/textassets/testframe3.png" id="5_yxww1"]
+[ext_resource type="Texture2D" uid="uid://n65wa3qycde" path="res://assets/charactersprites/dazyc.png" id="6_hvi53"]
 [ext_resource type="Texture2D" uid="uid://ctib670y88ikl" path="res://assets/charactersprites/miun.png" id="6_wdpcj"]
 [ext_resource type="Texture2D" uid="uid://dgvdc5w2uer0c" path="res://assets/charactersprites/spn.png" id="7_qi5as"]
+[ext_resource type="Texture2D" uid="uid://cmsjf4vm3rlsw" path="res://assets/charactersprites/dazysh.png" id="7_rr203"]
+[ext_resource type="Texture2D" uid="uid://bhb6r21noqjfn" path="res://assets/charactersprites/miuh.png" id="12_8vvwr"]
+[ext_resource type="Texture2D" uid="uid://sogdgvfgjkvy" path="res://assets/charactersprites/mius.png" id="13_5said"]
+[ext_resource type="Texture2D" uid="uid://bqt5h2odsiyje" path="res://assets/charactersprites/miuhal.png" id="14_pm3tn"]
+[ext_resource type="Texture2D" uid="uid://cqg4p3xalf8va" path="res://assets/charactersprites/miush.png" id="15_xvb2f"]
+[ext_resource type="Texture2D" uid="uid://pch2u51x01kx" path="res://assets/charactersprites/miua.png" id="16_uswop"]
+[ext_resource type="Texture2D" uid="uid://duy60g4i1t4e6" path="res://assets/charactersprites/sph.png" id="18_shm3m"]
+[ext_resource type="Texture2D" uid="uid://dqm6cdpa8fk1g" path="res://assets/charactersprites/sps.png" id="19_go3uk"]
+[ext_resource type="Texture2D" uid="uid://cf8yq10kvl5ge" path="res://assets/charactersprites/spm.png" id="20_lyohd"]
+[ext_resource type="Texture2D" uid="uid://cbvcq7223rjuh" path="res://assets/charactersprites/spsh.png" id="21_2ia7u"]
+[ext_resource type="Texture2D" uid="uid://plgacipmmo3e" path="res://assets/charactersprites/spa.png" id="22_0fer6"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_6ohtc"]
 animations = [{
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("2_yxww1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_8i6g0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_r5wlx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_1r1pa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_hvi53")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_rr203")
 }],
 "loop": true,
 "name": &"dazy",
@@ -35,6 +65,21 @@ animations = [{
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("6_wdpcj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_8vvwr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_5said")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_pm3tn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_xvb2f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_uswop")
 }],
 "loop": true,
 "name": &"miu",
@@ -43,6 +88,21 @@ animations = [{
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("7_qi5as")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_shm3m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_go3uk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_lyohd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_2ia7u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_0fer6")
 }],
 "loop": true,
 "name": &"sp",
@@ -55,4 +115,4 @@ script = ExtResource("1_pjt0s")
 [node name="sprites" type="AnimatedSprite2D" parent="."]
 scale = Vector2(0.7, 0.7)
 sprite_frames = SubResource("SpriteFrames_6ohtc")
-animation = &"sp"
+animation = &"dazy"

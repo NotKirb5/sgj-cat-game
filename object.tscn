@@ -1,21 +1,251 @@
-[gd_scene load_steps=6 format=3 uid="uid://bk4s5pg0mws31"]
+[gd_scene load_steps=41 format=3 uid="uid://bk4s5pg0mws31"]
 
 [ext_resource type="Script" uid="uid://derkbvcdntqs5" path="res://object.gd" id="1_0i3lm"]
 [ext_resource type="Theme" uid="uid://b4rgocusn6q8r" path="res://objecttheme.tres" id="1_3xuqs"]
-[ext_resource type="Texture2D" uid="uid://dyjm3o3w8vtx3" path="res://assets/prototype.png" id="2_0i3lm"]
-[ext_resource type="Texture2D" uid="uid://djfm6oy1ksuxi" path="res://assets/prototype2.png" id="4_dwaef"]
+[ext_resource type="Texture2D" uid="uid://cg2x35lmay8p3" path="res://assets/normalitems/books.png" id="3_1oh4d"]
+[ext_resource type="Texture2D" uid="uid://bxj3mec0hbi26" path="res://assets/fuckeditems/books.png" id="4_buabc"]
+[ext_resource type="Texture2D" uid="uid://yk37mjjkxtkx" path="res://assets/normalitems/box.png" id="5_0squw"]
+[ext_resource type="Texture2D" uid="uid://erd1etf6u11n" path="res://assets/fuckeditems/box.png" id="6_d2f1g"]
+[ext_resource type="Texture2D" uid="uid://dvjedxhxttjol" path="res://assets/normalitems/chair.png" id="7_lq6cj"]
+[ext_resource type="Texture2D" uid="uid://dgp18d3mdhjr2" path="res://assets/fuckeditems/chair.png" id="8_wrvn0"]
+[ext_resource type="Texture2D" uid="uid://1qlgnpy4uluh" path="res://assets/normalitems/coffee.png" id="9_mj0jm"]
+[ext_resource type="Texture2D" uid="uid://3o1tmcsod6a2" path="res://assets/fuckeditems/coffee.png" id="10_hy3er"]
+[ext_resource type="Texture2D" uid="uid://bskewmfaiq1rd" path="res://assets/normalitems/eraser.png" id="11_lqwo6"]
+[ext_resource type="Texture2D" uid="uid://cbo66be8y4oh" path="res://assets/fuckeditems/eraser.png" id="12_tlhf3"]
+[ext_resource type="Texture2D" uid="uid://bw3pgw1eld5r1" path="res://assets/normalitems/headphones.png" id="13_frr1r"]
+[ext_resource type="Texture2D" uid="uid://c1nrehvvw26hq" path="res://assets/fuckeditems/headphones.png" id="14_4xedg"]
+[ext_resource type="Texture2D" uid="uid://38ho3sqgm8tf" path="res://assets/normalitems/ink.png" id="15_we8f8"]
+[ext_resource type="Texture2D" uid="uid://b7l8lqkdw6lj2" path="res://assets/fuckeditems/ink.png" id="16_yqevx"]
+[ext_resource type="Texture2D" uid="uid://cth3tbgaw7ncj" path="res://assets/fuckeditems/inkspread.png" id="17_buabc"]
+[ext_resource type="Texture2D" uid="uid://o3vl5whxya2j" path="res://assets/normalitems/keyboard.png" id="17_xh0ed"]
+[ext_resource type="Texture2D" uid="uid://k10lhxosmck5" path="res://assets/fuckeditems/keyboard.png" id="18_gyp3n"]
+[ext_resource type="Texture2D" uid="uid://dycjc031iw7rg" path="res://assets/normalitems/monitor.png" id="19_h73f7"]
+[ext_resource type="Texture2D" uid="uid://nmh7yt4e1546" path="res://assets/fuckeditems/monitor.png" id="20_ybtes"]
+[ext_resource type="Texture2D" uid="uid://dx6e4xnbpnj5" path="res://assets/normalitems/paper.png" id="21_wdwwt"]
+[ext_resource type="Texture2D" uid="uid://ika34ieaf61x" path="res://assets/fuckeditems/paper.png" id="22_a0bp5"]
+[ext_resource type="Texture2D" uid="uid://t2jiu3touv6n" path="res://assets/normalitems/paperstack.png" id="23_tidrx"]
+[ext_resource type="Texture2D" uid="uid://262pqhlybl26" path="res://assets/fuckeditems/paperstack.png" id="24_teonh"]
+[ext_resource type="Texture2D" uid="uid://dghk26y43s6ui" path="res://assets/normalitems/pencilcase.png" id="25_jswha"]
+[ext_resource type="Texture2D" uid="uid://b2q1c7r6vuh5s" path="res://assets/fuckeditems/pencilcase.png" id="26_lltu6"]
+[ext_resource type="Texture2D" uid="uid://cretu872l682g" path="res://assets/normalitems/pencils.png" id="27_ua41j"]
+[ext_resource type="Texture2D" uid="uid://7xw5wn6s52pt" path="res://assets/fuckeditems/pencil.png" id="28_8n00j"]
+[ext_resource type="Texture2D" uid="uid://cxajh1vperl85" path="res://assets/normalitems/shelf.png" id="29_p0o62"]
+[ext_resource type="Texture2D" uid="uid://b3t1wrcs3mase" path="res://assets/fuckeditems/shelf.png" id="30_c8bah"]
+[ext_resource type="Texture2D" uid="uid://bps4rcncrvfpq" path="res://assets/normalitems/stapler.png" id="31_rtqut"]
+[ext_resource type="Texture2D" uid="uid://mmw26x15fipm" path="res://assets/fuckeditems/stapler.png" id="32_6m2h3"]
+[ext_resource type="Texture2D" uid="uid://bfbs2lpi7gvi7" path="res://assets/normalitems/totebag.png" id="33_h4e7p"]
+[ext_resource type="Texture2D" uid="uid://b53msrgjs0u6i" path="res://assets/fuckeditems/totebag.png" id="34_rgxjm"]
+[ext_resource type="Texture2D" uid="uid://c7ani8ujxh0vx" path="res://assets/normalitems/washitape.png" id="35_2x5t7"]
+[ext_resource type="Texture2D" uid="uid://b2a4q70g1h4t6" path="res://assets/fuckeditems/washitape.png" id="36_7v45n"]
+[ext_resource type="Texture2D" uid="uid://brmfolt8c80wb" path="res://assets/normalitems/yarn.png" id="37_ofpqy"]
+[ext_resource type="Texture2D" uid="uid://bwu71k2urnv7s" path="res://assets/fuckeditems/yarn.png" id="38_puemg"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_dwaef"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_0i3lm")
+"texture": ExtResource("3_1oh4d")
 }, {
 "duration": 1.0,
-"texture": ExtResource("4_dwaef")
+"texture": ExtResource("4_buabc")
 }],
 "loop": true,
-"name": &"test",
+"name": &"books",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_0squw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_d2f1g")
+}],
+"loop": true,
+"name": &"box",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_lq6cj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_wrvn0")
+}],
+"loop": true,
+"name": &"chair",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_mj0jm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_hy3er")
+}],
+"loop": true,
+"name": &"coffee",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_lqwo6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_tlhf3")
+}],
+"loop": true,
+"name": &"eraser",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("13_frr1r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_4xedg")
+}],
+"loop": true,
+"name": &"headphones",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("15_we8f8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_yqevx")
+}],
+"loop": true,
+"name": &"ink",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("17_buabc")
+}],
+"loop": true,
+"name": &"inksplat",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("17_xh0ed")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_gyp3n")
+}],
+"loop": true,
+"name": &"keyboard",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("19_h73f7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_ybtes")
+}],
+"loop": true,
+"name": &"monitor",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("21_wdwwt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_a0bp5")
+}],
+"loop": true,
+"name": &"paper",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("23_tidrx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_teonh")
+}],
+"loop": true,
+"name": &"paperstack",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("25_jswha")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_lltu6")
+}],
+"loop": true,
+"name": &"pencilcase",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("27_ua41j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_8n00j")
+}],
+"loop": true,
+"name": &"pencils",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("29_p0o62")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_c8bah")
+}],
+"loop": true,
+"name": &"shelf",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("31_rtqut")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_6m2h3")
+}],
+"loop": true,
+"name": &"stapler",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("33_h4e7p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_rgxjm")
+}],
+"loop": true,
+"name": &"totebag",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("35_2x5t7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_7v45n")
+}],
+"loop": true,
+"name": &"washitape",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("37_ofpqy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_puemg")
+}],
+"loop": true,
+"name": &"yarn",
 "speed": 5.0
 }]
 
@@ -23,15 +253,15 @@ animations = [{
 script = ExtResource("1_0i3lm")
 
 [node name="Button" type="Button" parent="."]
-offset_left = -255.0
-offset_top = -256.0
-offset_right = 256.0
-offset_bottom = 256.0
+offset_left = -48.0
+offset_top = -44.0
+offset_right = 45.0
+offset_bottom = 29.0
 theme = ExtResource("1_3xuqs")
 
 [node name="sprite" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_dwaef")
-animation = &"test"
+animation = &"ink"
 
 [connection signal="mouse_entered" from="Button" to="." method="_on_button_mouse_entered"]
 [connection signal="mouse_exited" from="Button" to="." method="_on_button_mouse_exited"]

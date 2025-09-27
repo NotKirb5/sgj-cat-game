@@ -20,14 +20,9 @@ func playscene(s:String)->void:
 	var result = JSON.parse_string(json_text)
 	if not sceneplaying:
 		sceneplaying = true
-		toggleclickables(true)
 		scene = s
 		var inst = overlay.instantiate()
 		add_child(inst)
 		inst.playdialogue(result[scene])
 
 #disables clickables when dialogue is going so we dont run into weird stuff
-func toggleclickables(b:bool)->void:
-	var clickables = get_tree().get_nodes_in_group('clickable')
-	for i in clickables:
-		i.disabled = b

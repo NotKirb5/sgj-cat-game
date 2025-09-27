@@ -116,8 +116,9 @@ func exec(commands:Array):
 			dman.playscene(commands[1])
 			self.queue_free()
 		"gaming":
-			print("HELP WE HAVENT DONT SHIT ABOUT THE GAMEPLAY FUCK IMMA JUST THROW THIS NUMBER OUT AAAH")
-			print(commands[1])
+			dman.sceneplaying = false
+			cman.startcat(commands[1], commands[2])
+			self.queue_free()
 		"transform":
 			#lowkey idk what we are doing here
 			print('we just gonna fucking transform ig')

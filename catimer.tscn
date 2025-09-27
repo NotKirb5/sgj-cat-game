@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://dqwm50tnliatx"]
+
+[ext_resource type="Script" uid="uid://b1fqih8yihwgo" path="res://catimer.gd" id="1_cjcab"]
+[ext_resource type="Texture2D" uid="uid://blj6wu2wydpll" path="res://assets/timerbar.png" id="2_vuw6o"]
+
+[node name="catimer" type="CanvasLayer"]
+script = ExtResource("1_cjcab")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 15.0
+one_shot = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(960, 1030)
+scale = Vector2(1, 0.2)
+texture = ExtResource("2_vuw6o")
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

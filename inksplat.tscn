@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://be5f6wahsocid"]
+
+[ext_resource type="Texture2D" uid="uid://cth3tbgaw7ncj" path="res://assets/fuckeditems/inkspread.png" id="1_hta5a"]
+
+[node name="inksplat" type="Sprite2D"]
+texture = ExtResource("1_hta5a")

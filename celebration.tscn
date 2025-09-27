@@ -1,0 +1,19 @@
+[gd_scene load_steps=2 format=3 uid="uid://b3rcm0srccii8"]
+
+[sub_resource type="Curve" id="Curve_wj5g1"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.7209303, 0.49438208), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[node name="celebration" type="CPUParticles2D"]
+amount = 32
+explosiveness = 1.0
+randomness = 1.0
+direction = Vector2(0, -1)
+spread = 30.0
+initial_velocity_min = 400.0
+initial_velocity_max = 400.0
+scale_amount_min = 50.0
+scale_amount_max = 50.0
+scale_amount_curve = SubResource("Curve_wj5g1")
+hue_variation_min = 1.0
+hue_variation_max = 1.0
